@@ -1,0 +1,131 @@
+:root {
+  --green-500: hsl(158, 36%, 37%);
+  --green-700: hsl(158, 42%, 18%);
+
+  /* Neutral Colors */
+  --white: hsl(0, 0%, 100%);
+  --cream: hsl(30, 38%, 92%);
+  --black: hsl(212, 21%, 14%);
+  --grey: hsl(228, 12%, 48%);
+
+  /* Fonts */
+  --font-body: "Montserrat", sans-serif;
+  --font-heading: "Fraunces", serif;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-size: 14px;
+  font-family: var(--font-body);
+  background-color: var(--cream);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+.container-card {
+  flex-direction: column;
+  overflow: hidden;
+  border-radius: 0.6rem;
+  background-color: var(--white);
+  margin: 0.77rem;
+}
+.container-div-card {
+  display: flex;
+  flex-direction: column;
+  gap: 1.3rem;
+  padding: 1.75rem;
+}
+
+.container-div-price {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.container-img {
+  width: 100%;
+  display: block;
+  object-fit: cover;
+  height: 100%;
+}
+
+.container-p_1 {
+  letter-spacing: 0.3rem;
+  opacity: 0.6;
+}
+
+.container-p_2 {
+  line-height: 1.3rem;
+  letter-spacing: 0.2px;
+  opacity: 0.6;
+}
+
+.container-h1 {
+  line-height: 1.8rem;
+  font-family: var(--font-heading);
+}
+
+.old-price {
+  padding-left: 15px;
+  opacity: 0.6;
+}
+
+.new-price {
+  color: var(--green-500);
+  font-size: 1.5rem;
+  font-family: var(--font-heading);
+  font-weight: 700;
+}
+
+.button {
+  background-color: var(--green-500);
+  border-radius: 7px;
+  padding: 0.76rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.6rem;
+  border: none;
+  cursor: pointer;
+}
+
+.icon-button {
+}
+
+.span-button {
+  color: var(--white);
+  line-height: 1.1px;
+}
+
+.button:hover {
+  background-color: var(--green-700);
+}
+
+@media (min-width: 600px) {
+  .container-card {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    max-width: 600px;
+    align-items: stretch;
+  }
+
+  .container-div-card {
+    display: grid;
+    grid-template-columns: 1fr;
+  }
+
+  .button {
+    padding: 0.5rem;
+  }
+
+  .container-h1 {
+    font-size: 1.95rem;
+  }
+}
